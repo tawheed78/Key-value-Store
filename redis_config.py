@@ -1,6 +1,8 @@
+"""Configuration module for Redis"""
+
+import os
 from huey import RedisHuey
 from dotenv import load_dotenv
-import os
 
 load_dotenv()
 

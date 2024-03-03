@@ -1,3 +1,5 @@
+"""Configuration module for huey consumer"""
+
 from huey.bin.huey_consumer import consumer_main
 
 if __name__ == '__main__':
