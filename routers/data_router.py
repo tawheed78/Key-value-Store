@@ -2,8 +2,8 @@
 
 from fastapi import APIRouter, HTTPException
 from models.database_model import KeyValueDb
-from db_config import client, db
-from redis_config import huey
+from configs.db_config import client, db
+from configs.redis_config import huey
 
 
 router = APIRouter()

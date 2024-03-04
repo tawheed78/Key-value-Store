@@ -1,5 +1,4 @@
 """Configuration module for Database"""
-
 from motor.motor_asyncio import AsyncIOMotorClient
 from dotenv import load_dotenv
 
@@ -13,5 +12,6 @@ db = client["kv_store"]
 
 try:
     client.admin.command("ping")
+    print('ping')
 except Exception as e:
     print(e)
