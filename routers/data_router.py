@@ -23,7 +23,10 @@ def store_data_in_db(data: KeyValueDb):
 
     """
     try:
-        document = {"_id": data.key, "value": data.value}
+        document = {
+            "_id": data.key,
+            "value": data.value
+            }
         collection.insert_one(document)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e)) from e
