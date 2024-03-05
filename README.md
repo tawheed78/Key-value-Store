@@ -83,28 +83,44 @@ The FastAPI application should now be accessible at http://localhost:8000.
 ## Usage
 Once the application is running, you can interact with it using HTTP requests. Here are some example requests:
 
+Data Schema:
+```json
+{
+  "key": "mykey",
+  "value": {
+    "field1": "value1",
+    "field2": "value2",
+    "nested_object": {
+      "nested_field1": "nested_value1",
+      "nested_field2": "nested_value2"
+    }
+  }
+}
+
+
 Get data by key:
 
 ```bash
-curl http://localhost:8000/get-data?key=mykey
+http://localhost:8000/get-data?key=mykey
 ```
+
 
 Store data:
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{"key": "mykey", "value": "myvalue"}' http://localhost:8000/store-data
+http://localhost:8000/store-data    along with data in Body.
 ```
 
 Update data:
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -d '{"key": "mykey", "value": "newvalue"}' http://localhost:8000/update-data?key=mykey
+http://localhost:8000/update-data?key=mykey   along with data in Body.
 ```
 
 Delete data:
 
 ```bash
-curl -X DELETE http://localhost:8000/delete-data?key=mykey
+http://localhost:8000/delete-data?key=mykey
 ```
 
 ## Contributing
