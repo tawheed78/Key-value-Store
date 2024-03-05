@@ -7,8 +7,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    networks:
-      - mynetwork
+    volumes:
+      - .:/app
     depends_on:
       - redis
 
@@ -16,17 +16,13 @@ services:
     image: redis:latest
     ports:
       - "6379:6379"
-    networks:
-      - mynetwork
 
   huey_consumer:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - .:/app
     command: python huey_consumer.py routers.data_router.huey -w 4
-    networks:
-      - mynetwork
-
-networks:
-  mynetwork:
-    driver: bridge
+    depends_on:
+      - redis
