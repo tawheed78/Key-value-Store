@@ -18,7 +18,7 @@ The project consists of several components:
 - Huey: Manages asynchronous task execution using Redis as a queue.
 - Redis: Used as the data store for the key-value pairs.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 ## Prerequisites
@@ -28,7 +28,7 @@ Before running the project, ensure you have the following dependencies installed
 - Python 3.9 or higher
 - Docker (optional, for running with Docker Compose)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- GETTING STARTED -->
@@ -63,7 +63,7 @@ Before running the project, ensure you have the following dependencies installed
    ```
 The FastAPI application should now be accessible at http://localhost:8000.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 ## Running with Docker Compose
@@ -73,7 +73,8 @@ To run the application with Docker Compose:
 1. Make sure you have Docker and Docker Compose installed.
 2. Start the containers:
 ```sh
-docker-compose up --build
+docker-compose build
+docker-compose up
 ```
 
 The FastAPI application should now be accessible at http://localhost:8000.
