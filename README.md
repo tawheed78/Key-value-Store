@@ -96,7 +96,7 @@ Data Schema:
     }
   }
 }
-
+```
 
 Get data by key:
 
@@ -108,7 +108,7 @@ http://localhost:8000/get-data?key=mykey
 Store data:
 
 ```bash
-http://localhost:8000/store-data    along with data in Body.
+http://localhost:8000/post-data    along with data in Body.
 ```
 
 Update data:
